@@ -5,8 +5,6 @@ dependencyResolutionManagement {
         create("libs") {
             library("h2", "com.h2database:h2:1.4.200")
             library("lombok", "org.projectlombok:lombok:1.18.20")
-            version("spring-boot", "2.6.3")
-            library("spring-boot-dependencies", "org.springframework.boot", "spring-boot-dependencies").versionRef("spring-boot")
             library("spring-boot-starter-web", "org.springframework.boot", "spring-boot-starter-web").version("")
             library("spring-boot-starter-validation", "org.springframework.boot", "spring-boot-starter-validation").version("")
             library("spring-boot-starter-actuator", "org.springframework.boot", "spring-boot-starter-actuator").version("")

@@ -1,6 +1,8 @@
+import org.springframework.boot.gradle.plugin.SpringBootPlugin
+
 plugins {
     java
-    id("org.springframework.boot") version("2.6.3")
+    id("org.springframework.boot") version ("2.6.3")
 }
 
 repositories {
@@ -8,7 +10,7 @@ repositories {
 }
 
 dependencies {
-    implementation(platform(libs.spring.boot.dependencies))
+    implementation(platform(SpringBootPlugin.BOM_COORDINATES))
     implementation(libs.spring.boot.starter.web)
     implementation(libs.spring.boot.starter.validation)
     implementation(libs.spring.boot.starter.actuator)
@@ -21,7 +23,7 @@ dependencies {
 }
 
 tasks.test {
-        useJUnitPlatform()
+    useJUnitPlatform()
 }
 
 java {
